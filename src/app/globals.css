@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
+@theme inline {
+  --font-im-fell: var(--font-im-fell);
+}
+
 body {
-  background: #ffffff;
+  background: #fbf8f4;
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;

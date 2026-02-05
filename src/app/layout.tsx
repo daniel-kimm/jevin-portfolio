@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Ovo, Reenie_Beanie } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,9 +12,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const ovo = Ovo({
+  variable: "--font-im-fell",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const reenieBeanie = Reenie_Beanie({
+  variable: "--font-reenie",
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Jevin",
-  description: "Watch this space",
+  description: "Jevin Benthotage Wijenayake",
 };
 
 export default function RootLayout({
@@ -25,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ovo.variable} ${reenieBeanie.variable} antialiased`}
       >
         {children}
       </body>
